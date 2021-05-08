@@ -4,26 +4,44 @@ html {
 
 body {
     min-height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: arial, sans-serif;
 }
 
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: 
                 "header header header"
                 "main main main"
                 "footer footer footer";
+    height: 100vh;
 }
 
 header {
     grid-area: header;
-    background-color: green;
+    background-color: rgb(156, 206, 156);
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
 }
 
 main {
     grid-area: main;
-    background-color: yellow;
+    background-color: rgb(247, 247, 139);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,4 +54,12 @@ main .search {
 footer {
     grid-area: footer;
     background-color: red;
+}
+
+.search-button {
+    font-size: 14px;
+}
+
+.account-image {
+    border-radius: 50%;
 }
