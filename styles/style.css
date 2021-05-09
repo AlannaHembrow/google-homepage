@@ -152,6 +152,10 @@ footer {
     padding: 10px;
 }
 
+.footer-main a:hover {
+    text-decoration: underline;
+}
+
 .footer-main .footer-nav {
     justify-content: flex-start;
     display: flex;
